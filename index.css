@@ -1,0 +1,100 @@
+header{
+    width:80%;
+    margin-left: 5%; 
+    
+}
+
+#logo
+{
+    width:15%;
+    float:left;
+    
+}
+#banner
+{
+    width:90%;
+    margin-right: 5%;
+}
+
+#logo img
+{
+    width:75%;
+    height:100px;  
+}
+#banner img
+{
+    width:75%;
+    height:120px;
+}
+
+section
+{
+    margin-top: 10%;
+    width:80%;
+    margin-left: 5%;
+    
+}
+#emi
+{
+    width:40%;
+    margin-left: 5%;
+    float:left;
+    background-color: gray;
+}
+#result
+{
+    width:40%;
+    margin-left: 50%; 
+    border:2px solid green;
+    height:200px;
+    background-color: gray;
+}
+
+
+fieldset
+{
+    border:2px solid red;
+}
+
+legend
+{
+    text-align: center;
+    font-size: xx-large;
+    color: blue;
+}
+
+input
+{
+    width:80%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+}
+
+input[type="submit"]
+{
+    background-color: blue;
+    color: white;
+    width:25%;
+    margin-left: 20%;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 30px 30px 30px 30px;
+    float:left;
+}
+input[type="reset"]
+{
+    background-color: blue;
+    color: white;
+    width:25%;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 30px 30px 30px 30px;
+
+}
+
+.phoneStyle
+{
+  width:19%;
+  
+
+}
