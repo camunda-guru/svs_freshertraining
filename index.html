@@ -33,12 +33,20 @@
            <form  onsubmit="return calculate()">
                <fieldset>
                    <legend>Loan Calculator</legend>
+                   <input type="date" id="dob">
                    <input type="number" id="loanAmount" placeholder="Loan Amount">
                    <input type="number" id="interestRate" placeholder="Interest Rate" onchange="irCaution()">
                    <input type="number" id="tenure" placeholder="Tenure" onchange="tenureCaution()">
+                   <input type="text" id="cityName" list="cityList" onchange="readCity(this.value)"> 
                    <input type="submit" value="submit">
+                   <input type="reset" value="reset">
                 </fieldset>
            </form>
+
+           <datalist id="cityList">
+              
+           </datalist>
+
         </article>
        <article id="result">
            
