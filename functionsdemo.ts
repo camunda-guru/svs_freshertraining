@@ -49,15 +49,19 @@ var sharesData:any[][]=[
 
 ]
 
-
+var count=1;
 function getSharePrices(shares:any[][])
 {
-
+    
     shares.forEach(arr=>{
+        console.log("Day:"+count);
+        arr.sort((x,y)=>x.sharePrice< y.sharePrice ? 1 :0);
         arr.forEach(obj=>{
             console.log(obj.companyName,"==>",obj.sharePrice);
         })
+        count=count+1;
     })
+    
 }
 
 getSharePrices(sharesData);
