@@ -5,6 +5,7 @@ export class Policy
     fromDate:Date;
     toDate:Date;
     premium:number;
+    static terms:string;
     constructor(pno:number,insAmt:number,fdate:Date,
     tdate:Date,prem:number)
     {
@@ -13,5 +14,9 @@ export class Policy
         this.fromDate=fdate;
         this.toDate=tdate;
         this.premium=prem;
+    }
+    static getTerms():string
+    {
+        return Policy.terms;
     }
 }
