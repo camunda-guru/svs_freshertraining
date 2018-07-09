@@ -1,73 +1,15 @@
-<!Doctype html>
-<!--
-  Author:Parameswari Ettiappan
-  Date:06/07/2018
-  Description:Developing E-Commerce Application
-
--->
-<html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="../styles/index.css">
-        <script type="text/javascript" src="../scripts/app.js">
-
-          
-        </script>
-        <script>
-                var isNS = (navigator.appName == "IE") ? 1 : 0;
-                 if(navigator.appName == "IE")
-                document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);  
-               function mischandler(){   
-               return false;
-                } 
-                function mousehandler(e){
-                var myevent = (isNS) ? e : event; 
-               var eventbutton  = (isNS) ? myevent.which : myevent.button;    
-               if((eventbutton==2)||(eventbutton==3))
-                return false;
-                }
-                document.oncontextmenu = mischandler;
-               document.onmousedown = mousehandler;
-                document.onmouseup =mousehandler;
-            </script>
- </head>
-    <body>
-       <!-- <h1>Ready to Rock.....</h1> -->
-       
-       <header>
-           
-           <figure id="logo">
-               <img src="../resources/logo.jpg">
-           </figure>
-           <figure id="banner">
-                <img src="../resources/banner.jpg">
-            </figure>
-       </header>
-      <section>
-       <article id="emi">
-           <form  onsubmit="return calculate()">
-               <fieldset>
-                   <legend>Loan Calculator</legend>
-                   <input type="text" name="country" id="country" size="3" maxlength="3" placeholder="Country code" class="phoneStyle" onkeyup="autoTab('country', '3', 'area')"/>
-                   <input type="text" name="area" id="area" size="3" placeholder="Area code" maxlength="3" class="phoneStyle"  onkeyup="autoTab('area', '3', 'phone')"/> 
-                   <input type="text" name="phone" id="phone" size="4" class="phoneStyle"  maxlength="4"/>  
-                    <input type="date" id="dob">
-                   <input type="number" id="loanAmount" placeholder="Loan Amount">
-                   <input type="number" id="interestRate" placeholder="Interest Rate" onchange="irCaution()">
-                   <input type="number" id="tenure" placeholder="Tenure" onchange="tenureCaution()">
-                   <input type="text" id="cityName" list="cityList" onchange="readCity(this.value)"> 
-                   <input type="submit" value="submit">
-                   <input type="reset" value="reset">
-                </fieldset>
-           </form>
-
-           <datalist id="cityList">
-              
-           </datalist>
-
-        </article>
-       <article id="result">
-           
-       </article>
-    </section>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    document.write('<base href="' + document.location + '" />');
+    </script>
+</head>
+<body>
+<claim-header>Loading...</claim-header>
+<script type="text/javascript" src="./dist/vendor.bundle.js"></script>
+<script type="text/javascript" src="./dist/app.bundle.js"></script>
+</body>
 </html>
