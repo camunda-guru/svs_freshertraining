@@ -8,7 +8,7 @@
               Pledging
             </mat-panel-description>
           </mat-expansion-panel-header>
-      
+        <form  [formGroup]="lienForm"  (ngSubmit)="save()">
           <mat-form-field>
                 <mat-select placeholder="Lien Type" 
                 (change)="onLienTypeSelect($event)">
@@ -67,12 +67,13 @@
                   <mat-icon>calendar_today</mat-icon>
                   
         </mat-form-field>
-        <button mat-icon-button >
+        <button type="submit" [disabled]="!lienForm.valid"  mat-icon-button id="savebutton">
                 <mat-icon>save</mat-icon>
         </button> 
-        <button mat-icon-button >
+        <button type="reset" mat-icon-button >
                 <mat-icon>clear</mat-icon>
-        </button>      
+        </button> 
+    </form>     
         </mat-expansion-panel>
         <mat-expansion-panel (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">

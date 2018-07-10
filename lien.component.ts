@@ -16,7 +16,8 @@ export class LienComponent
    private refNoFrmCtrl:FormControl;
    private startDateFrmCtrl:FormControl;
    private endDateFrmCtrl:FormControl;
-   constructor()
+   private lienForm:FormGroup;
+   constructor(private formBuilder:FormBuilder)
    {
        this.lientypes=["Voluntary","Non Voluntary","Non Consensual"
     ,"Stautory","Judicial"];
@@ -33,6 +34,15 @@ export class LienComponent
 );
 this.endDateFrmCtrl=new FormControl('',[Validators.required]
 );
+
+       this.lienForm=formBuilder.group({
+          amount:this.amountFrmCtrl,
+          branch:this.branchFrmCtrl,
+          refNo:this.refNoFrmCtrl,
+          startDate:this.startDateFrmCtrl,
+          endDate:this.endDateFrmCtrl
+       });
+
    }
 
     onLienTypeSelect(obj)
@@ -42,6 +52,11 @@ this.endDateFrmCtrl=new FormControl('',[Validators.required]
     onLienCompanySelect(obj)
     {
 
+    }
+
+    save()
+    {
+          console.log(this.lienForm.value);
     }
 
 }
