@@ -38,13 +38,10 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin(ccpOptions),
-
-        // Takes care of warnings described at https://github.com/angular/angular/issues/11580
         new webpack.ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
-            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-            root('./src'), // location of your src
-            { }
+            /angular(\\|\/)core(\\|\/)(@angular|esm5)/,
+            path.resolve(__dirname, '../src')
         ),
 
         new webpack.LoaderOptionsPlugin({
