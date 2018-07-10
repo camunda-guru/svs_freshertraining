@@ -1,0 +1,65 @@
+<mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header id="top">
+            <mat-panel-title>
+              Lien Details
+            </mat-panel-title>
+            <mat-panel-description>
+              Pledging
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field>
+                <mat-select placeholder="Lien Type" 
+                (change)="onLienTypeSelect($event)">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let obj of lientypes" 
+                    [value]="obj">
+                        {{obj}}</mat-option>
+                </mat-select>
+                <mat-icon>class</mat-icon>
+           </mat-form-field>
+           <mat-form-field>
+                <mat-select placeholder="Lien Company" 
+                (change)="onLienCompanySelect($event)">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let obj of liencompanies" 
+                    [value]="obj">
+                        {{obj}}</mat-option>
+                </mat-select>
+                <mat-icon>business-center</mat-icon>
+           </mat-form-field>
+           <mat-form-field >
+                <input type="number" matInput placeholder="amount" 
+                [formControl]="amountFrmCtrl">
+                <mat-icon>info</mat-icon>
+                <mat-error *ngIf="amountFrmCtrl.hasError('pattern')">
+                        Amount is <strong>number</strong>
+                      </mat-error>
+                <mat-error *ngIf="amountFrmCtrl.hasError('required')">
+                  Amount is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field >
+                    <input type="search" matInput placeholder="Lien Branch" 
+                    
+                    [formControl]="branchFrmCtrl">
+                   <mat-icon>search</mat-icon>
+                    <mat-error *ngIf="branchFrmCtrl.hasError('required')">
+                      Branch is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header id="bottom">
+            <mat-panel-title>
+              Lien Details
+            </mat-panel-title>
+            <mat-panel-description>
+              Lien Information
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
