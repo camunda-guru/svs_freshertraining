@@ -49,6 +49,30 @@
                       Branch is <strong>required</strong>
                     </mat-error>
                   </mat-form-field>
+                  <mat-form-field >
+                        <input type="number" matInput placeholder="Lien Ref No"                         
+                        [formControl]="refNoFrmCtrl">
+                       <mat-icon>confirmation_number</mat-icon>
+                        
+                </mat-form-field>
+                <mat-form-field >
+                        <input type="date" matInput placeholder="Lien Start Date"                         
+                        [formControl]="startDateFrmCtrl">
+                      <mat-icon>calendar_today</mat-icon>
+                        
+            </mat-form-field>
+            <mat-form-field >
+                    <input type="date" matInput placeholder="Lien End Date"                         
+                    [formControl]="endDateFrmCtrl">
+                  <mat-icon>calendar_today</mat-icon>
+                  
+        </mat-form-field>
+        <button mat-icon-button >
+                <mat-icon>save</mat-icon>
+        </button> 
+        <button mat-icon-button >
+                <mat-icon>clear</mat-icon>
+        </button>      
         </mat-expansion-panel>
         <mat-expansion-panel (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">

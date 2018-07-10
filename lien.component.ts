@@ -13,6 +13,9 @@ export class LienComponent
    private liencompanies:string[];
    private amountFrmCtrl:FormControl;
    private branchFrmCtrl:FormControl;
+   private refNoFrmCtrl:FormControl;
+   private startDateFrmCtrl:FormControl;
+   private endDateFrmCtrl:FormControl;
    constructor()
    {
        this.lientypes=["Voluntary","Non Voluntary","Non Consensual"
@@ -24,6 +27,12 @@ export class LienComponent
       ]);
       this. branchFrmCtrl=new FormControl('',[Validators.required]
       );
+      this.refNoFrmCtrl=new FormControl('',[Validators.required]
+    );
+    this.startDateFrmCtrl=new FormControl('',[Validators.required]
+);
+this.endDateFrmCtrl=new FormControl('',[Validators.required]
+);
    }
 
     onLienTypeSelect(obj)
