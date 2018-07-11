@@ -17,6 +17,9 @@ export class LienComponent
    private startDateFrmCtrl:FormControl;
    private endDateFrmCtrl:FormControl;
    private lienForm:FormGroup;
+   private isExpanded:boolean=false;
+   private selectedLienType:string;
+   private selectedLienCompany:string;
    constructor(private formBuilder:FormBuilder)
    {
        this.lientypes=["Voluntary","Non Voluntary","Non Consensual"
@@ -47,16 +50,17 @@ this.endDateFrmCtrl=new FormControl('',[Validators.required]
 
     onLienTypeSelect(obj)
     {
-
+       this.selectedLienType=obj.value        
     }
     onLienCompanySelect(obj)
     {
-
+         this.selectedLienCompany=obj.value
     }
 
     save()
     {
-          console.log(this.lienForm.value);
+        this.isExpanded = !this.isExpanded;
+        console.log(this.lienForm.value);
     }
 
 }

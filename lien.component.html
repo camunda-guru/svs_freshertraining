@@ -75,7 +75,7 @@
         </button> 
     </form>     
         </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
+        <mat-expansion-panel [expanded]='isExpanded' (opened)="panelOpenState = true"
                              (closed)="panelOpenState = false">
           <mat-expansion-panel-header id="bottom">
             <mat-panel-title>
@@ -85,6 +85,11 @@
               Lien Information
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>I'm visible because I am open</p>
-        </mat-expansion-panel>
+          <div >
+          <p>Lien Type:{{selectedLienType}}</p>
+          <p>Lien Company:{{selectedLienCompany}}</p>
+          <p>Amount:{{lienForm.value.amount}}</p>
+          <p>Branch:{{lienForm.value.branch}}</p>
+        </div>
+        </mat-expansion-panel> 
       </mat-accordion>
