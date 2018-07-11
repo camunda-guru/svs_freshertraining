@@ -1,0 +1,26 @@
+#childsection
+{
+    width:80%;
+    margin-left: 5%;
+    background-color: gray;
+}
+#childheader
+{
+    height:50px;
+    background-color: aqua;
+}
+.content
+{
+    width:100%;
+    color:white;
+    font-weight: bold;
+    font-size:large;
+
+    
+}
+
+tr:nth-child(2n+1)
+{
+    background-color: white;
+    color:gray;
+}
